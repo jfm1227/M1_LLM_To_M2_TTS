@@ -1,0 +1,20 @@
+# configs/default.yaml
+schema_version: "llm_tts_contracts_v0.2"
+
+llm:
+  max_turns: 5
+  mode: "monologue"   # "monologue" / "reply" / 将来拡張
+
+tts:
+  sample_rate: 24000
+  base_ms_per_char: 90   # ダミーTTSの長さ計算用（本番 TTS では無視）
+  base_ms_min: 600       # 文字数が少ないときの最低長
+
+paths:
+  out_root: "out"
+  audio_subdir: "audio"
+  utt_log_filename: "utt_log.jsonl"
+
+session:
+  id_prefix: "sess_"
+  seed: 12345
